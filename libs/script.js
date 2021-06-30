@@ -7,6 +7,11 @@ $(document).ready(function() {
   $("#conarrow").hide();
   $("#cvarrow").hide();
   $("video#bk").hide();
+  $("img#bk").hide();
+  $(".detail").hide();
+  $(".back").hide();
+  $("img#bk2").hide();
+
 
   $(".header").ready(function(){
     var timer = !1;
@@ -23,12 +28,27 @@ $(document).ready(function() {
     this.startTicker();
   });
 });
-$("#dapamine").hover(function(){
+
+$("#dopamine").hover(function(){
   $("video#bk").show();
 },
 function(){
   $("video#bk").hide();
   });
+
+$("#pass").hover(function(){
+    $("img#bk").show();
+  },
+function(){
+  $("img#bk").hide();
+  });
+  $("#muoftru").hover(function(){
+      $("img#bk2").show();
+    },
+  function(){
+    $("img#bk2").hide();
+    });
+
 
 $("div.item").hover(function(){
   $(this).css("color","#000000");
@@ -66,6 +86,22 @@ $("#cv").click(function(){
         $(".Contact").fadeIn();
         $("#conarrow").fadeIn();
       });
+$(".back").click(function() {
+  $(".frontpage").show();
+  $(".detail").hide();
+  $(".back").hide();
+});
+
+$("#pass").click(function(){
+  $(".frontpage").hide();
+  $("#infopass").show();
+  $(".back").show();
+});
+$("#dopamine").click(function(){
+  $(".frontpage").hide();
+  $("#infodopamine").show();
+  $(".back").show();
+});
 
 
 });
