@@ -6,6 +6,7 @@ $(document).ready(function() {
   $("#workarrow").show();
   $("#conarrow").hide();
   $("#cvarrow").hide();
+  $("video#bk").hide();
 
   $(".header").ready(function(){
     var timer = !1;
@@ -22,9 +23,19 @@ $(document).ready(function() {
     this.startTicker();
   });
 });
+$("#dapamine").hover(function(){
+  $("video#bk").show();
+},
+function(){
+  $("video#bk").hide();
+  });
 
-$("div.item").hover(function(){$(this).css("color","#000000")},
-function(){$(this).css("color","#AAAAAA")});
+$("div.item").hover(function(){
+  $(this).css("color","#000000");
+  },
+function(){
+  $(this).css("color","#AAAAAA")
+  });
 
 $("div.bt").hover(function(){$(this).css("color","#000000")},
 function(){$(this).css("color","#AAAAAA")});
